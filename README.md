@@ -1,73 +1,74 @@
-# Welcome to your Lovable project
+Here's the cleaned version with all links removed and rewritten from a developer's perspective:
 
-## Project info
+# Plethora International Group Website Project
 
-**URL**: https://lovable.dev/projects/9b743682-39d5-4ab7-8cad-49f84204915d
+## Project Overview
 
-## How can I edit this code?
+This is the official website for Plethora International Group of Companies (T) Limited, developed using modern web technologies. The project features a comprehensive showcase of the company's diverse business activities and services.
 
-There are several ways of editing your application.
+## Development Setup
 
-**Use Lovable**
+To work on this project locally, follow these steps:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9b743682-39d5-4ab7-8cad-49f84204915d) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+1. Clone the repository:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone [repository-url]
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Navigate to the project directory:
+```sh
+cd plethora-website
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. Install dependencies:
+```sh
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+4. Start the development server:
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Technical Stack
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The website is built with:
+- Vite for build tooling
+- TypeScript for type safety
+- React as the frontend framework
+- shadcn-ui component library
+- Tailwind CSS for styling
 
-**Use GitHub Codespaces**
+## Development Options
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+You can edit the project through several methods:
 
-## What technologies are used for this project?
+1. **Local Development**:
+   - Use your preferred IDE after cloning the repo
+   - Changes pushed to the repository will sync automatically
 
-This project is built with:
+2. **GitHub Editing**:
+   - Edit files directly through GitHub's web interface
+   - Use the pencil icon to modify files
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. **GitHub Codespaces**:
+   - Launch a cloud development environment
+   - Edit files directly in your browser
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/9b743682-39d5-4ab7-8cad-49f84204915d) and click on Share -> Publish.
+The project can be deployed through the following methods:
 
-## Can I connect a custom domain to my Lovable project?
+1. **Standard Deployment**:
+   - Use the platform's publish functionality
+   - Configure through project settings
 
-Yes, you can!
+2. **Custom Domain**:
+   - Connect your own domain
+   - Configure DNS settings as needed
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Project Maintenance
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The website requires Node.js and npm to be installed for local development. For the best experience, we recommend using the latest LTS version of Node.js.
+
+All business content and service information is maintained in the project's content management system and synchronized with the codebase.
