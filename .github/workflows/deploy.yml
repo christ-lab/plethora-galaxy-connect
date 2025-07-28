@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - master
+      - master # Use "main" if your branch is called main
 
 jobs:
   build-and-deploy:
@@ -26,5 +26,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: 'ftp'
-          local-dir: ./dist/
-          server-dir: /public_html/
+          local-dir: ./dist/ # Change to ./build/ if your build output is in "build"
+          server-dir: /home/plethora/domains/plethoragroupofcompanies.com/
