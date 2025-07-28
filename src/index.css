@@ -60,6 +60,10 @@ All colors MUST be HSL for proper theme switching.
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
+    /* Partners marquee colors */
+    --partners-text: var(--bronze-deep);
+    --partners-hover: var(--gold-primary);
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -122,6 +126,10 @@ All colors MUST be HSL for proper theme switching.
     --sidebar-accent-foreground: 35 25% 90%;
     --sidebar-border: 210 4% 25%;
     --sidebar-ring: 51 100% 50%;
+
+    /* Partners marquee colors - Dark theme */
+    --partners-text: var(--gold-primary);
+    --partners-hover: var(--gold-secondary);
   }
 }
 
@@ -247,5 +255,10 @@ All colors MUST be HSL for proper theme switching.
   @keyframes slide-in-right {
     from { transform: translateX(100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
+  }
+
+  /* Glow effect for text */
+  .drop-shadow-glow {
+    filter: drop-shadow(0 0 8px hsl(var(--gold-primary) / 0.5));
   }
 }
