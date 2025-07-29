@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - master # Use "main" if your branch is called main
+      - master # or main if your branch is main
 
 jobs:
   build-and-deploy:
@@ -19,12 +19,61 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Deploy to Hosting via FTP
+      - name: Deploy to public_html via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          passwname: Build and Deploy
+
+on:
+  push:
+    branches:
+      - master # or main if your branch is main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build site
+        run: npm run build
+
+      - name: Deploy to public_html via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: 'ftp'
-          local-dir: ./dist/ # Change to ./build/ if your build output is in "build"
-          server-dir: /home/plethora/domains/plethoragroupofcompanies.com/
+          local-dir: ./dist/   # (or ./build/ if your build folder is build)
+          server-dir: /home/plethora/domains/plethoragroupofcompanies.com/public_html/
+
+      - name: Deploy to private_html via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: 'ftp'
+          local-dir: ./dist/   # (or ./build/ if your build folder is build)
+          server-dir: /home/plethora/domains/plethoragroupofcompanies.com/private_html/ord: ${{ secrets.FTP_PASSWORD }}
+          protocol: 'ftp'
+          local-dir: ./dist/   # (or ./build/ if your build folder is build)
+          server-dir: /home/plethora/domains/plethoragroupofcompanies.com/public_html/
+
+      - name: Deploy to private_html via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: 'ftp'
+          local-dir: ./dist/   # (or ./build/ if your build folder is build)
+          server-dir: /home/plethora/domains/plethoragroupofcompanies.com/private_html/
