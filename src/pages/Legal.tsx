@@ -17,7 +17,7 @@ const Legal = () => {
       title: "Certificate of Incorporation",
       description: "Official company registration certificate from BRELA (Business Registrations and Licensing Agency) Tanzania",
       type: "Incorporation",
-      number: "No: 157652710",
+      number: "No: 157-XXX-XXX",
       date: "August 31, 2022",
       authority: "BRELA - Tanzania",
       icon: <Building2 className="h-8 w-8" />,
@@ -27,7 +27,7 @@ const Legal = () => {
       title: "Taxpayer Identification Number (TIN) Certificate",
       description: "Official TIN registration certificate from Tanzania Revenue Authority",
       type: "Tax Registration",
-      number: "TIN: 157-652-710",
+      number: "TIN: 157-XXX-XXX",
       date: "August 31, 2022",
       authority: "Tanzania Revenue Authority",
       icon: <CreditCard className="h-8 w-8" />,
@@ -37,7 +37,7 @@ const Legal = () => {
       title: "Business License",
       description: "Official business license for ICT Services Local operations",
       type: "Business License",
-      number: "BL No: BL01396912024-2500016699",
+      number: "BL No: BL013969XXXXX-XXXXXXXXXX",
       date: "November 14, 2024",
       authority: "Kinondoni Municipal Council",
       icon: <Scale className="h-8 w-8" />,
@@ -53,15 +53,15 @@ const Legal = () => {
     },
     {
       title: "BRELA Registration Number",
-      value: "157652710"
+      value: "157-XXX-XXX"
     },
     {
       title: "Tax Identification Number (TIN)",
-      value: "157-652-710"
+      value: "157-XXX-XXX"
     },
     {
       title: "Business License Number",
-      value: "BL01396912024-2500016699"
+      value: "BL013969XXXXX-XXXXXXXXXX"
     },
     {
       title: "Business Type",
