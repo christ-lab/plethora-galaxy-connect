@@ -120,7 +120,7 @@ const Contact = () => {
                 <div className="flex items-start space-x-3">
                   <User className="h-5 w-5 text-primary mt-1" />
                   <div>
-                    <h4 className="font-semibold text-lg">Chrispine Mlingi</h4>
+                    <h4 className="font-semibold text-lg">Chris M.</h4>
                     <p className="text-muted-foreground">Executive Director, CEO & Founder</p>
                   </div>
                 </div>
